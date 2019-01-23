@@ -266,7 +266,7 @@ def copy_text26():
 
 
 # input dropdown and label
-label1 = tk.Label(text='Column Data:',font=("Arial",10)).grid(column=0,row=0,sticky='W',padx=10,pady=10)
+label1 = tk.Label(text='Column Data:',font=('Arial',10)).grid(column=0,row=0,sticky='W',padx=10,pady=10)
 text1 = tk.Text(window,height=20,width=20)
 text1.grid(column=0,row=1,rowspan=20,padx=10)
 scrollbar1 = tk.Scrollbar(window, orient='vertical')
@@ -288,8 +288,8 @@ button2 = tk.Button(window, image=left, border=0, cursor='hand2',command=convert
 clear = tk.PhotoImage(file=os.path.abspath('./clear.png'))
 button3 = tk.Button(window, image=clear, border=0, cursor='hand2',command=clearall).grid(column=1,row=11,sticky='W'+'E')
 
-labelsplit = tk.Label(text='Units per Group:*',font=("Arial",10)).grid(column=1,row=14,sticky='W',padx=10,pady=10)
-textsplit = tk.Text(window,height=1,width=7)
+labelsplit = tk.Label(text='Units per Group:*',font=('Arial',10)).grid(column=1,row=14,sticky='W',padx=10,pady=10)
+textsplit = tk.Text(window,height=1,width=7,font=('Arial',10))
 textsplit.grid(column=1,row=17)
 
 
@@ -501,9 +501,9 @@ button27 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_t
 button28 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text25).grid(column=9,row=14,sticky='E')
 button29 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text26).grid(column=11,row=14,sticky='E')
 
-label8 = tk.Label(text="© 2019 Parry Pardun",font=("Arial",8)).grid(column=0,row=22,sticky='W'+'S')
+label8 = tk.Label(text='© 2019 Parry Pardun',font=('Arial',8)).grid(column=0,row=22,sticky='W'+'S')
 
-label9 = tk.Label(text="*Default 0 for no grouping",font=("Arial",8)).grid(column=1,row=22,sticky='W'+'S')
+label9 = tk.Label(text='*Default 0 for no grouping',font=('Arial',8)).grid(column=1,row=22,sticky='W'+'S')
 
 start_value()
 window.update_idletasks()
