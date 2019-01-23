@@ -7,17 +7,17 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{EA7EA0EA-3792-45AF-BC1A-636C44900442}
 AppName=ListGen
-AppVersion=1.0
-;AppVerName=ListGen 1.0
+AppVersion=2.0
+;AppVerName=ListGen 2.0
 AppPublisher=Parry Pardun
 AppPublisherURL=https://github.com/pjpardun/listgen
 AppSupportURL=https://github.com/pjpardun/listgen
 AppUpdatesURL=https://github.com/pjpardun/listgen
 DefaultDirName={pf}\ListGen
 DisableProgramGroupPage=yes
-LicenseFile=C:\Python projects\ListGen\Releases\LICENSE
-OutputBaseFilename=ListGen 1.0 Setup
-SetupIconFile=C:\Python projects\ListGen\Releases\list.ico
+LicenseFile=C:\Python projects\ListGen\Source\Installer\LICENSE
+OutputBaseFilename=ListGen 2.0 Setup
+SetupIconFile=C:\Python projects\ListGen\Source\Installer\list.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -28,11 +28,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Python projects\ListGen\Source\EXE\dist\ListGen 1.0.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Python projects\ListGen\Source\EXE\dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Python projects\ListGen\Source\Executable\dist\ListGen 2.0.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Python projects\ListGen\Source\Executable\dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\ListGen"; Filename: "{app}\ListGen 1.0.exe"; IconFilename: "{app}\list.ico"
-Name: "{commondesktop}\ListGen"; Filename: "{app}\ListGen 1.0.exe"; Tasks: desktopicon; IconFilename: "{app}\list.ico"
+Name: "{commonprograms}\ListGen"; Filename: "{app}\ListGen 2.0.exe"; IconFilename: "{app}\list.ico"
+Name: "{commondesktop}\ListGen"; Filename: "{app}\ListGen 2.0.exe"; Tasks: desktopicon; IconFilename: "{app}\list.ico"
 
