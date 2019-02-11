@@ -78,194 +78,18 @@ def convert_line():
 
 
 def clearall():
-	text1.delete('1.0',tk.END)
-	text2.delete('1.0',tk.END)
-	text3.delete('1.0',tk.END)
-	text4.delete('1.0',tk.END)
-	text5.delete('1.0',tk.END)
-	text6.delete('1.0',tk.END)
-	text7.delete('1.0',tk.END)
-	text8.delete('1.0',tk.END)
-	text9.delete('1.0',tk.END)
-	text10.delete('1.0',tk.END)
-	text11.delete('1.0',tk.END)
-	text12.delete('1.0',tk.END)
-	text13.delete('1.0',tk.END)
-	text14.delete('1.0',tk.END)
-	text15.delete('1.0',tk.END)
-	text16.delete('1.0',tk.END)
-	text17.delete('1.0',tk.END)
-	text18.delete('1.0',tk.END)
-	text19.delete('1.0',tk.END)
-	text20.delete('1.0',tk.END)
-	text21.delete('1.0',tk.END)
-	text22.delete('1.0',tk.END)
-	text23.delete('1.0',tk.END)
-	text24.delete('1.0',tk.END)
-	text25.delete('1.0',tk.END)
-	text26.delete('1.0',tk.END)
-	textsplit.delete('1.0',tk.END)
+	for i in [text1,text2,text3,text4,text5,text6,text7,text8,text9,text10,text11,text12,text13,text14,text15,text16,text17,text18,text19,text20,text21,text22,text23,text24,text25,text26,textsplit]:
+		i.delete('1.0',tk.END)
 	textsplit.insert(tk.END, '0')
 
 
-
-def copy_text1():
-	input = text1.get('1.0',tk.END)
+def copy_text(textObj):
+	input = textObj.get('1.0',tk.END)
 	window.clipboard_clear()  
 	window.clipboard_append(input)
 
 
-def copy_text2():
-	input = text2.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text3():
-	input = text3.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text4():
-	input = text4.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text5():
-	input = text5.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text6():
-	input = text6.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text7():
-	input = text7.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text8():
-	input = text8.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text9():
-	input = text9.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text10():
-	input = text10.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text11():
-	input = text11.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text12():
-	input = text12.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text13():
-	input = text13.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text14():
-	input = text14.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text15():
-	input = text15.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text16():
-	input = text16.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text17():
-	input = text17.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text18():
-	input = text18.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text19():
-	input = text19.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text20():
-	input = text20.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text21():
-	input = text21.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text22():
-	input = text22.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text23():
-	input = text23.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text24():
-	input = text24.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text25():
-	input = text25.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-def copy_text26():
-	input = text26.get('1.0',tk.END)
-	window.clipboard_clear()  
-	window.clipboard_append(input)
-
-
-# input dropdown and label
+#GUI widgets
 label1 = tk.Label(text='Column Data:',font=('Arial',10)).grid(column=0,row=0,sticky='W',padx=10,pady=10)
 text1 = tk.Text(window,height=20,width=20)
 text1.grid(column=0,row=1,rowspan=20,padx=10)
@@ -292,8 +116,6 @@ labelsplit = tk.Label(text='Units per Group:*',font=('Arial',10)).grid(column=1,
 textsplit = tk.Text(window,height=1,width=7,font=('Arial',10))
 textsplit.grid(column=1,row=17)
 
-
-
 label2 = tk.Label(text='Delimited Data:',font=('Arial',10)).grid(column=2,row=0,sticky='W',padx=10,pady=10)
 text2 = tk.Text(window,height=3,width=15)
 text2.grid(column=2,row=1,rowspan=3)
@@ -302,7 +124,6 @@ scrollbar2.grid(column=2,row=1,rowspan=3,sticky='N'+'S'+'E',pady=3)
 scrollbar2.config( command = text2.yview )
 text2.configure(yscrollcommand=scrollbar2.set)
 
-#
 text3 = tk.Text(window,height=3,width=15)
 text3.grid(column=4,row=1,rowspan=3)
 scrollbar3 = tk.Scrollbar(window, orient='vertical')
@@ -471,35 +292,33 @@ scrollbar26.grid(column=10,row=13,rowspan=3,sticky='N'+'S'+'E',pady=3)
 scrollbar26.config( command = text26.yview )
 text26.configure(yscrollcommand=scrollbar26.set)
 
-#
-
 clip = tk.PhotoImage(file=os.path.abspath('./clipboard.png'))
-button4 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text1).grid(column=0,row=21,sticky='E')
-button5 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text2).grid(column=3,row=2,sticky='E')
-button6 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text3).grid(column=5,row=2,sticky='E')
-button7 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text4).grid(column=7,row=2,sticky='E')
-button8 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text5).grid(column=9,row=2,sticky='E')
-button9 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text6).grid(column=11,row=2,sticky='E')
-button10 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text7).grid(column=3,row=5,sticky='E')
-button11 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text8).grid(column=5,row=5,sticky='E')
-button12 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text9).grid(column=7,row=5,sticky='E')
-button13 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text10).grid(column=9,row=5,sticky='E')
-button14 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text11).grid(column=11,row=5,sticky='E')
-button15 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text12).grid(column=3,row=8,sticky='E')
-button16 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text13).grid(column=5,row=8,sticky='E')
-button17 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text14).grid(column=7,row=8,sticky='E')
-button18 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text15).grid(column=9,row=8,sticky='E')
-button19 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text16).grid(column=11,row=8,sticky='E')
-button20 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text17).grid(column=3,row=11,sticky='E')
-button21 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text18).grid(column=5,row=11,sticky='E')
-button22 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text19).grid(column=7,row=11,sticky='E')
-button23 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text20).grid(column=9,row=11,sticky='E')
-button24 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text21).grid(column=11,row=11,sticky='E')
-button25 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text22).grid(column=3,row=14,sticky='E')
-button26 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text23).grid(column=5,row=14,sticky='E')
-button27 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text24).grid(column=7,row=14,sticky='E')
-button28 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text25).grid(column=9,row=14,sticky='E')
-button29 = tk.Button(window, image=clip, border=0, cursor='hand2',command=copy_text26).grid(column=11,row=14,sticky='E')
+button4 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text1)).grid(column=0,row=21,sticky='E')
+button5 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text2)).grid(column=3,row=2,sticky='E')
+button6 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text3)).grid(column=5,row=2,sticky='E')
+button7 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text4)).grid(column=7,row=2,sticky='E')
+button8 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text5)).grid(column=9,row=2,sticky='E')
+button9 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text6)).grid(column=11,row=2,sticky='E')
+button10 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text7)).grid(column=3,row=5,sticky='E')
+button11 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text8)).grid(column=5,row=5,sticky='E')
+button12 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text9)).grid(column=7,row=5,sticky='E')
+button13 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text10)).grid(column=9,row=5,sticky='E')
+button14 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text11)).grid(column=11,row=5,sticky='E')
+button15 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text12)).grid(column=3,row=8,sticky='E')
+button16 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text13)).grid(column=5,row=8,sticky='E')
+button17 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text14)).grid(column=7,row=8,sticky='E')
+button18 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text15)).grid(column=9,row=8,sticky='E')
+button19 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text16)).grid(column=11,row=8,sticky='E')
+button20 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text17)).grid(column=3,row=11,sticky='E')
+button21 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text18)).grid(column=5,row=11,sticky='E')
+button22 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text19)).grid(column=7,row=11,sticky='E')
+button23 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text20)).grid(column=9,row=11,sticky='E')
+button24 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text21)).grid(column=11,row=11,sticky='E')
+button25 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text22)).grid(column=3,row=14,sticky='E')
+button26 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text23)).grid(column=5,row=14,sticky='E')
+button27 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text24)).grid(column=7,row=14,sticky='E')
+button28 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text25)).grid(column=9,row=14,sticky='E')
+button29 = tk.Button(window, image=clip, border=0, cursor='hand2',command=lambda:copy_text(text26)).grid(column=11,row=14,sticky='E')
 
 label8 = tk.Label(text='© 2019 Parry Pardun',font=('Arial',8)).grid(column=0,row=22,sticky='W'+'S')
 
@@ -509,5 +328,3 @@ start_value()
 window.update_idletasks()
 window.deiconify()
 window.mainloop()
-
-
